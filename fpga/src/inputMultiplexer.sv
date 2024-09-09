@@ -1,27 +1,18 @@
 module inputMultiplexer(
-input reset, clk,
-input [3:0] s1, s2,
-output logic en1, en2,
-output logic [3:0] sevSegInput
+    input reset, clk,
+        input [3:0] s1, s2,
+    output logic en1, en2,
+    output logic [3:0] sevSegInput
 );
-    logic en1, en2;
-
-
-    logic [3:0] logicInput;
-
-    logic [7:0] fullInput;
-    assign fullInput = s1 + s2;
-
+    assign en2 = ~en1;
     always_ff @(posedge clk) begin
         if (reset == 0) begin
-            en1 <= 1;
-            en2 <= 0;
-            logicInput <= fullInput[3:0];
+            en1 <= 0;
+            sevSegInput = s1;
         end else begin
-            if (en1) logicInput <= fullInput[3:0];
-            else logicInput <= fullInput[7:4];
+            if (en1) sevSegInput = s2;
+            else sevSegInput = s1;
             en1 <= ~en1;
-            en2 <= ~en2;
         end
     end
 endmodule

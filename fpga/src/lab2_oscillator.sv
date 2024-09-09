@@ -12,7 +12,7 @@ module lab2_oscillator(
         if (reset == 0) begin
             counter <= 0;
             oscOut <= 0;
-        end else if (counter == 500000) begin
+        end else if (counter == 100000) begin
             oscOut <= ~oscOut;
             counter <= 0;
         end else counter <= counter + 1;
