@@ -1,4 +1,4 @@
-module 4adder(
+module adder(
     input  logic [3:0] a, b,
     output logic [5:0] y
 );

@@ -8,7 +8,7 @@ module lab2(
     logic clk;
     lab2_oscillator oscillator(reset, clk);
 
-    4adder adder(s1, s2, sum);
+    adder add(s1, s2, sum);
 
     logic [3:0] sevSegInput;
     inputMultiplexer inLogic(reset, clk, s1, s2, en1, en2, sevSegInput);
