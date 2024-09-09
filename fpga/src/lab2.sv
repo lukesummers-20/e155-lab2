@@ -9,7 +9,7 @@ logic clk;
 lab2_oscillator oscillator(reset, clk);
 
 logic [3:0] sevSegInput;
-inputMultiplexer(reset, clk, s1, s2, en1, en2, sevSegInput);
+inputMultiplexer inLogic(reset, clk, s1, s2, en1, en2, sevSegInput);
 
 sevSegLogic(sevSegInput, sevSegOut);
 endmodule
