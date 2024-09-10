@@ -23,11 +23,11 @@ module lab2_inputMultiplexer_tb();
             $display(" en2 = %b en2Expected = %b with s1 = %b and s2 = %b", en2, en2Expected, s1, s2);
         end
         clk = 0;#5;
-        s1 = 4b'0000;
+        s1 = 4'b0000;
         s2 = 4'b1111;
         en1Expected = 1;
         en2Expected = 0;
-        sevSegInputExpected = 4b'1111;
+        sevSegInputExpected = 4'b1111;
         clk = 1;#10;
         if (sevSegInput != sevSegInputExpected) begin
             $display(" sevSegInput = %b sevSegInputExpected = %b with s1 = %b and s2 = %b", sevSegInput, sevSegInputExpected, s1, s2);
@@ -38,7 +38,7 @@ module lab2_inputMultiplexer_tb();
         end
         clk = 0;#5;
         s1 = 4'b0110;
-        s2 = 4b'1001;
+        s2 = 4'b1001;
         en1Expected = 0;
         en2Expected = 1;
         sevSegInputExpected = 4'b0110;
