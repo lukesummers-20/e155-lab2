@@ -1,6 +1,6 @@
 module inputMultiplexer(
     input reset, clk,
-        input [3:0] s1, s2,
+    input [3:0] s1, s2,
     output logic en1, en2,
     output logic [3:0] sevSegInput
 );
