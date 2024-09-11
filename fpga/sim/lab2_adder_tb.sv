@@ -1,3 +1,5 @@
+// Luke Summers lsummers@g.hmc.edu 9/10/24
+// testbench for adder module
 module lab2_adder_tb();
     logic [3:0] a, b;
     logic [4:0] y, yExpected;

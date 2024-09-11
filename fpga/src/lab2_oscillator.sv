@@ -1,3 +1,5 @@
+// Luke Summers lsummers@g.hmc.edu 9/10/24
+// oscillating signal producing module
 module lab2_oscillator(
     input  logic reset,
     output logic oscOut

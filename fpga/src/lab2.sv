@@ -1,3 +1,5 @@
+// Luke Summers lsummers@g.hmc.edu 9/10/24
+// takes two four bit inputs and displays both on a seven segment display and calculates their sum
 module lab2(
     input  logic [3:0] s1, s2,
     input  logic reset,

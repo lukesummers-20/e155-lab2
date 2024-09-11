@@ -1,3 +1,5 @@
+// Luke Summers lsummers@g.hmc.edu 9/10/24
+// testbench for the inputMultiplexer module
 module lab2_inputMultiplexer_tb();
     logic [3:0] s1, s2;
     logic [3:0] sevSegInput, sevSegInputExpected;
